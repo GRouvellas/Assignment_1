@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <title>Students</title>
+</head>
+<body>
+    <div class="container">
+    <div class="ul">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="trainers.html">Trainers</a></li>
+            <li><a href="students.html">Students</a></li>
+            <li><a href="assignments.html">Assignments</a></li>
+            <li><a href="trainersPcourse.html">Trainers Per Course</a></li>
+            <li><a href="studentsPcourse.html">Students Per Course</a></li>
+            <li><a href="assignmentsPcourse.html">Assignments Per Course</a></li>
+            <li><a href="assignmentsPstudentPcourse.html">Assignments Per Student Per Course</a></li>
+        </ul>
+    </div>  
+        <h2>Students</h2>
+        <br>
+            <div class="container2">
+                <form onsubmit = "event.preventDefault();onFormSubmit();">
+                    <div>
+                        <label>First Name:</label><label class="validation-error hide" id="fnameValidationError">First Name cannot be longer than 30 characters!</label>
+                        <input type="text" name="fname" id="fname" required><br>
+                    </div>
+                    <div>
+                        <label>Last Name:</label><label class="validation-error hide" id="lnameValidationError">Last Name cannot be longer than 30 characters!</label>
+                        <input type="text" name="lname" id="lname" required><br>
+                    </div>
+                    <div>
+                        <label>Date Of Birth:</label>
+                        <input type="date" name="dateOfBirth" id="dateOfBirth" required><br>
+                    </div>
+                    <div>
+                        <label>Tuition Fees:</label><label class="validation-error hide" id="tuitionFeesValidationError">Tuition Fees cannot take negative values</label>
+                        <input type="number" step="0.01" name="tuitionFees" id="tuitionFees" required><br>
+                    </div>
+                    <div>
+                        <input type="submit" value="Add/Update" class="button">
+                    </div>
+                </form>
+            </div><br>
+                <div class="container2">
+                    <table class="list" id="studentList">
+                        <caption>List of Records</caption>
+                        <tr>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Date OF Birth</th>
+                            <th>Tuition Fees</th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <td>Anastasios</td>
+                            <td>Anastasiou</td>
+                            <td>1990-01-18</td>
+                            <td>1500</td>
+                            <td><a onClick="onEdit(this)">Edit</a>
+                                <a onClick="onDelete(this)">Delete</a></td>
+                        </tr>
+                        <tr>
+                            <td>Kyriakoula</td>
+                            <td>Kyriakou</td>
+                            <td>1985-08-17</td>
+                            <td>2500</td>
+                            <td><a onClick="onEdit(this)">Edit</a>
+                                <a onClick="onDelete(this)">Delete</a></td>
+                        </tr>
+                        <tr>
+                            <td>Antonis</td>
+                            <td>Antoniou</td>
+                            <td>2002-12-3</td>
+                            <td>2250</td>
+                            <td><a onClick="onEdit(this)">Edit</a>
+                                <a onClick="onDelete(this)">Delete</a></td>
+                        </tr>
+                        <tr>
+                            <td>Eleftheria</td>
+                            <td>Eleftheriou</td>
+                            <td>1998-05-23</td>
+                            <td>2250</td>
+                            <td><a onClick="onEdit(this)">Edit</a>
+                                <a onClick="onDelete(this)">Delete</a></td>
+                        </tr>
+                        <tr>
+                            <td>Konstantina</td>
+                            <td>Konstantinou</td>
+                            <td>1979-07-06</td>
+                            <td>2500</td>
+                            <td><a onClick="onEdit(this)">Edit</a>
+                                <a onClick="onDelete(this)">Delete</a></td>
+                        </tr>                        
+                    </table>
+                </div>
+    </div>
+<script src="../JS/students.js">
+</script>
+</body>
+</html>

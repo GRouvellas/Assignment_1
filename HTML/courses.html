@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <title>Courses</title>
+</head>
+<body>
+    <div class="container">
+    <div class="ul">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="trainers.html">Trainers</a></li>
+            <li><a href="students.html">Students</a></li>
+            <li><a href="assignments.html">Assignments</a></li>
+            <li><a href="trainersPcourse.html">Trainers Per Course</a></li>
+            <li><a href="studentsPcourse.html">Students Per Course</a></li>
+            <li><a href="assignmentsPcourse.html">Assignments Per Course</a></li>
+            <li><a href="assignmentsPstudentPcourse.html">Assignments Per Student Per Course</a></li>
+        </ul>
+    </div>  
+        <h2>Courses</h2>
+        <br>
+            <div class="container2">
+                <form onsubmit = "event.preventDefault();onFormSubmit();">
+                    <div>
+                        <label>Title:</label><label class="validation-error hide" id="titleValidationError">Title cannot be longer than 10 characters and must start with the letters "CB"!</label>
+                        <input type="text" name="title" id="title" required><br>
+                    </div>
+                    <div>
+                        <label>Stream:</label><label class="validation-error hide" id="streamValidationError">Stream cannot be longer than 20 characters!</label>
+                        <input type="text" name="stream" id="stream" required><br>
+                    </div>
+                    <div>
+                        <label>Type:</label><label class="validation-error hide" id="typeValidationError">Type cannot be longer than 20 characters!</label>
+                        <input type="text" name="type" id="type" required><br>
+                    </div>
+                    <div>
+                        <label>Start Date:</label>
+                        <input type="date" name="startDate" id="startDate" required><br>
+                    </div>
+                    <div>
+                        <label>End Date:</label>
+                        <input type="date" name="endDate" id="endDate" required><br>
+                    </div>
+                    <div>
+                        <input type="submit" value="Add/Update" class="button">
+                    </div>
+                </form>
+            </div><br>
+                <div class="container2">
+                    <table class="list" id="courseList">
+                        <caption>List of Records</caption>                       
+                        <tr>
+                            <th>Title</th>
+                            <th>Stream</th>
+                            <th>Type</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <td>CB1</td>
+                            <td>Java</td>
+                            <td>Full-Time</td>
+                            <td>2020-12-07</td>
+                            <td>2021-03-19</td>
+                            <td><a onClick="onEdit(this)">Edit</a>
+                                <a onClick="onDelete(this)">Delete</a></td>
+                        </tr>
+                        <tr>
+                            <td>CB2</td>
+                            <td>HTML</td>
+                            <td>Full-Time</td>
+                            <td>2021-02-08</td>
+                            <td>2021-06-28</td>
+                            <td><a onClick="onEdit(this)">Edit</a>
+                                <a onClick="onDelete(this)">Delete</a></td>
+                        </tr>
+                        <tr>
+                            <td>CB3</td>
+                            <td>CSS</td>
+                            <td>Full-Time</td>
+                            <td>2020-01-11</td>
+                            <td>2021-04-23</td>
+                            <td><a onClick="onEdit(this)">Edit</a>
+                                <a onClick="onDelete(this)">Delete</a></td>
+                        </tr>
+                        <tr>
+                            <td>CB4</td>
+                            <td>JavaScript</td>
+                            <td>Part-Time</td>
+                            <td>2021-01-04</td>
+                            <td>2021-07-01</td>
+                            <td><a onClick="onEdit(this)">Edit</a>
+                                <a onClick="onDelete(this)">Delete</a></td>
+                        </tr>                                          
+                    </table>
+                </div>
+    </div>            
+<script src="../JS/courses.js">
+</script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <title>Assignments Per Course</title>
+</head>
+<body>
+    <div class="container">
+    <div class="ul">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="trainers.html">Trainers</a></li>
+            <li><a href="students.html">Students</a></li>
+            <li><a href="assignments.html">Assignments</a></li>
+            <li><a href="trainersPcourse.html">Trainers Per Course</a></li>
+            <li><a href="studentsPcourse.html">Students Per Course</a></li>
+            <li><a href="assignmentsPcourse.html">Assignments Per Course</a></li>
+            <li><a href="assignmentsPstudentPcourse.html">Assignments Per Student Per Course</a></li>
+        </ul>
+    </div>  
+        <h2>Assignments Per Course</h2>
+        <br>
+            <div class="container2">
+                <form onsubmit = "event.preventDefault();onFormSubmit();">
+                    <div>
+                        <label>Course Title:</label><label class="validation-error hide" id="ctitleValidationError">Course Title cannot be longer than 10 characters and must start with the letters "CB"!</label>
+                        <input type="text" name="ctitle" id="ctitle" required><br>
+                    </div>
+                    <div>
+                        <label>Assignment Title:</label><label class="validation-error hide" id="atitleValidationError">Assignment Title cannot be longer than 30 characters!</label>
+                        <input type="text" name="atitle" id="atitle" required><br>
+                    </div>
+                    <div>
+                        <input type="submit" value="Add/Update" class="button">
+                    </div>
+                </form>
+            </div><br>
+                <div class="container2">
+                    <table class="list" id="assignmentPerCourseList">
+                        <caption>List of Records</caption>                       
+                        <tr>
+                            <th>Course Title</th>
+                            <th>Assignment Title</th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <td>CB31</td>
+                            <td>Assignment 11</td>
+                            <td><a onClick="onEdit(this)">Edit</a>
+                                <a onClick="onDelete(this)">Delete</a></td>
+                        </tr>
+                        <tr>
+                            <td>CB32</td>
+                            <td>Assignment 12</td>
+                            <td><a onClick="onEdit(this)">Edit</a>
+                                <a onClick="onDelete(this)">Delete</a></td>
+                        </tr>
+                        <tr>
+                            <td>CB33</td>
+                            <td>Assignment 13</td>
+                            <td><a onClick="onEdit(this)">Edit</a>
+                                <a onClick="onDelete(this)">Delete</a></td>
+                        </tr>
+                        <tr>
+                            <td>CB33</td>
+                            <td>Assignment 14</td>
+                            <td><a onClick="onEdit(this)">Edit</a>
+                                <a onClick="onDelete(this)">Delete</a></td>
+                        </tr>                                          
+                    </table>
+                </div>
+    </div>            
+<script src="../JS/assignmentsPcourse.js">
+</script>
+</body>
+</html>
